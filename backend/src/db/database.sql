@@ -17,7 +17,7 @@ CREATE TABLE users (
 DROP TABLE IF EXISTS posts;
 CREATE TABLE posts (
   id SERIAL PRIMARY KEY,
-  user_id BIGINT NOT NULL,
+  user_id BIGINT UNSIGNED NOT NULL,
   content text NOT NULL,
   date_created DATETIME NOT NULL,
   date_updated DATETIME,
