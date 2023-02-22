@@ -1,7 +1,9 @@
-import { Express } from "express";
+import { Express } from 'express'
 
-import usersRouter from "./routers/users/usersRouter";
+import authRouter from './routers/users/authRouter'
+import usersRouter from './routers/users/usersRouter'
 
 export const addRouters = (app: Express) => {
-  app.use("/api", usersRouter);
-};
+  app.use('/api', usersRouter)
+  app.use('/auth', authRouter)
+}
